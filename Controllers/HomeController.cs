@@ -14,7 +14,8 @@ namespace VirtualPetDojoDatchi.Controllers
         [Route("")]
         [HttpGet]
         public IActionResult Index()
-        {
+        {   
+
             int? happiness = HttpContext.Session.GetInt32("Happiness");
             int? fullness = HttpContext.Session.GetInt32("Fullness");
             int? energy = HttpContext.Session.GetInt32("Energy");
@@ -45,9 +46,19 @@ namespace VirtualPetDojoDatchi.Controllers
                 System.Console.WriteLine(doggy.Fullness);
                 System.Console.WriteLine(doggy.Message);
 
-            }     
-        
-            // string Message = HttpContext.Session.GetString("Message");
+            }   
+
+            if(doggy.Happiness >=100 && doggy.Fullness>=100 && doggy.Energy >=100)
+            {
+                HttpContext.Session.SetString("Message", "YOU HAVE WON DOG BECAME SUPERDOG !!");
+                doggy.Message = HttpContext.Session.GetString("Message");
+            }  
+            if(doggy.Happiness<=0 || doggy.Fullness<=0 || doggy.Energy<=0)
+            {
+                HttpContext.Session.SetString("Message", "DOG DIED!! YOU'RE A TERRIBLE HUMAN :/");
+                doggy.Message = HttpContext.Session.GetString("Message");
+            } 
+
             return View("Index", doggy);
         }
 
