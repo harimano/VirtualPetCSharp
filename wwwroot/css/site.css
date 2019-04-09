@@ -35,9 +35,20 @@ body {
         display: none;
     }
 }
-
-.top h3{
+h3{
+    color: #ede8e2;
+    margin-left: 18%;
+}
+body{
+    width: 100%;
+    height: 900px;
+    background-color:#474747;
+    margin-left: 15%;
+}
+.box2 h5{
     display: inline-block;
+    margin-left: 10px;
+    font-weight: 600;
 }
 .box{
     width: 600px;
@@ -45,18 +56,27 @@ body {
     border: 1px black solid;
     padding: 10px;
     background-color: #ede8e2;
+    border-radius: 25px;
 }
 
 img{
     margin-left: 50px;
     width: 450px;
-    height: 350px;
+    height: 300px;
 }
 button{
-    margin:10px 45px 10px 45px;
+    margin:12px 30px 10px 25px;
+    width: 90px;
     background-color:  #ede8e2;
+    border-radius: 5px;
+
+    
 }
 
 a{
     color: #474747;
+}
+
+p{
+    text-align: center;
 }

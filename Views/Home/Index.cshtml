@@ -1,23 +1,30 @@
-﻿<div class="container">
+﻿@model Pet
+
+<div class  ="container">
     <div class="top">
-        <h3>Fullness: </h3> &nbsp;
-        <h3>Happiness:</h3> &nbsp;
-        <h3>Meals: </h3> &nbsp;
-        <h3>Energy: </h3> &nbsp;
+        <h3>DOJODATCHI</h3>
     </div>
 
     <div class="box">
 
         <img src='~/images/pug.gif' alt="PetGif">
-        <p></p>
+        <div class="box2">
+            <h5>Fullness: &nbsp; @Model.Fullness </h5> &nbsp;
+            <h5>Happiness:  &nbsp; @Model.Happiness</h5> &nbsp;
+            <h5>Meals:  &nbsp; @Model.Meal </h5> &nbsp;
+            <h5>Energy:  &nbsp; @Model.Energy </h5> &nbsp;
+
+            <p>@Model.Message </p>
+
+        </div>
     </div>
 
     
-    <button><a href="">Feed</a></button>
+    <button><a href="/feed">Feed</a></button>
 
-    <button><a href="">Play</a></button>
+    <button><a href="/play">Play</a></button>
 
-    <button><a href="">Work</a></button>
+    <button><a href="/work">Work</a></button>
 
-    <button><a href="">Sleep</a></button>
+    <button><a href="/sleep">Sleep</a></button>
 </div>
